@@ -1,0 +1,2 @@
+INSERT INTO `dede_flink` VALUES('9','1','http://www.genban.org','织梦模板','','','','1227772717','1','2');
+INSERT INTO `dede_flink` VALUES('8','1','http://www.genban.org','织梦技术论坛','','','','1227772703','1','2');
