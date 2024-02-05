@@ -1,0 +1,76 @@
+<!-- Footer -->
+
+<footer id="footer"> 
+  
+  <!-- Main Footer -->
+  <div id="main-footer" class="smallest-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div id="text-2" class="widget widget_text">
+            <div class="textwidget"> <img src="/genban/img/marine-logo-light.png" alt="logo">
+              <p> 泰兴市虹润家庭农场是专注有机农产品种植及长江/澳洲鱼虾养殖的知名专业品牌，主营水稻、小麦种植、垂钓，稻虾养殖等。</p>
+              <p> 虹润农场为农机合作社江苏省省级示范社及泰州/泰兴示范家庭农场，致力于生态农场+绿色农场+有机农场+科技农场的结合发展，期待您的支持与加入！</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div id="latest-posts-3" class="widget widget_latest_posts_entries">
+            <h4>企业动态</h4>
+            {dede:arclist titlelen='40' row='2' typeid='9' infolen='40'}
+            <div class="blog-post"> <span class="post-meta">[field:pubdate function=MyDate('Y-m-d',@me)'/]</span> <a class="post-title" href="[field:arcurl /]">[field:title/]</a>
+              <p> [field:infos /] </p>
+            </div>
+            {/dede:arclist} </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div id="text-4" class="widget widget_text">
+            <h4>联系我们</h4>
+            <div class="textwidget">
+              <ul class="iconic-list">
+                <li> <i class="icons icon-location-7"></i> {dede:global.moke_adress/}</li>
+                <li> <i class="icons icon-mobile-6"></i> {dede:global.phone/}</li>
+                <li> <i class="icons icon-mail-7"></i> {dede:global.email/}</li>
+                <li> <i class="icons icon-desktop"></i> {dede:global.cfg_beian/}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div id="wysija-3" class="widget widget_wysija">
+            <h4>邮件订阅</h4>
+            <div class="widget_wysija_cont">
+              <p>致力于打造成优秀、全面、先进的中国农业生产基地！</p>
+              <form class="subscribe-form" action="http://list.qq.com/cgi-bin/qf_compose_send">
+                <input type="hidden" name="t" value="qf_booked_feedback">
+                <input type="hidden" name="id" value="79d7181ac4d8b0144664925406fa6b1ebc29568929546ae8">
+                <input class="subscribe-email" type="text" name="to" placeholder="请输入你的邮箱" required>
+                <input class="subscribe-form-submit wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
+                <label class="subscribe-form-result"></label>
+              </form>
+            </div>
+          </div>
+          <div id="social-media-2" class="widget widget_social_media">
+            <h4>关注我们</h4>
+            <ul class="social-media">
+              <li class="tooltip-ontop" title="weibo"><a href="dfsdfsdfscvc"><i class="icon-weibo"></i></a></li>
+              <li class="tooltip-ontop" title="wechat"><a href="dfsder"><i class="icon-weixin"></i></a></li>
+              <li class="tooltip-ontop" title="renren"><a href="fsdf"><i class="icon-renren"></i></a></li>
+              <li class="tooltip-ontop" title="Google Plus"><a href="sdfs"><i class="icon-google"></i></a></li>
+              <li class="tooltip-ontop" title="Vimeo"><a href="dfsdf"><i class="icon-vimeo"></i></a></li>
+              <li class="tooltip-ontop" title="Linkedin"><a href="fsdfsd"><i class="icon-linkedin"></i></a></li>
+              <li class="tooltip-ontop" title="Instagram"><a href="fsdfsdf"><i class="icon-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Main Footer --> 
+  <!-- Lower Footer -->
+  <div id="lower-footer">
+    <div class="container"> <span class="copyright">{dede:global.cfg_powerby/}</span> </div>
+  </div>
+  <!-- /Lower Footer --> 
+</footer>
+<!-- /Footer -->

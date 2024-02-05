@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html lang="en" class="isie ie8 oldie no-js"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="isie ie9 no-js"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<!-- Meta Tags -->
+<meta charset="gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<!-- Favicon -->
+<link rel="shortcut icon" href="/genban/img/favicon.jpg" type="image/x-icon"/>
+<!-- Google Fonts -->
+
+<!-- Stylesheets -->
+<link rel='stylesheet' id='twitter-bootstrap-css' href='/genban/css/bootstrap.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='fontello-css' href='/genban/css/fontello.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='prettyphoto-css-css' href='/genban/js/prettyphoto/css/prettyPhoto.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='animation-css' href='/genban/css/animation.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='flexSlider-css' href='/genban/css/flexslider.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='perfectscrollbar-css' href='/genban/css/perfect-scrollbar-0.4.10.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-validity-css' href='/genban/css/jquery.validity.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-ui-css' href='/genban/css/jquery-ui.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='style-css' href='/genban/css/style.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='mobilenav-css' href='/genban/css/mobilenav.css' type='text/css' media="screen and (max-width: 838px)"/>
+<link rel="stylesheet" type="text/css" href="/genban/css/style.revslider.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/genban/js/rs-plugin/css/settings.css" media="screen"/>
+<!-- jQuery -->
+<script src="/genban/js/jquery-1.11.1.min.js"></script>
+<!--[if lt IE 9]>
+            <script>
+                document.createElement("header");
+                document.createElement("nav");
+                document.createElement("section");
+                document.createElement("article");
+                document.createElement("aside");
+                document.createElement("footer");
+                document.createElement("hgroup");
+            </script>
+        <![endif]-->
+<!--[if lt IE 9]>
+            <script src="js/html5.js"></script>
+        <![endif]-->
+<!--[if lt IE 7]>
+            <script src="js/icomoon.js"></script>
+        <![endif]-->
+<!--[if lt IE 9]>
+            <link href="css/ie.css" rel="stylesheet">
+        <![endif]-->
+<!--[if lt IE 9]>
+            <script src="js/jquery.placeholder.js"></script>
+            <script src="js/script_ie.js"></script>
+        <![endif]-->
+</head>
+<body class="w1170 headerstyle1">
+<!-- Marine Content Wrapper -->
+<div id="marine-content-wrapper">
+{dede:include filename="head.htm"/}
+<!-- Marine Content Inner -->
+	<div id="marine-content-inner">
+	<!-- Main Content -->
+	<section id="main-content">
+	<!-- Container -->
+	<div class="container">
+		<section class="full-width dark-blue-bg page-heading position-left-top size-cover marine-menu-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h1>{dede:field name='typename' /}</h1>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<p class="breadcrumbs">
+						<span typeof="v:Breadcrumb">{dede:field name='position'/}</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		</section>
+		<section id="projects-container" class="portfolio-3column normal-padding">
+		<div class="sorting-tags light">
+        {dede:channel type='son'}
+      <div class="filter"><a href='[field:typeurl/]'>[field:typename/]</a></div>
+      {/dede:channel}
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div id="post-items" class="portfolio-page-items">
+                {dede:list pagesize='9' titlelen='30' infolen='180'}
+					<div class="col-lg-4 col-md-4 col-sm-6 project-item mix category-print">
+						<div class="project">
+							<div class="project-image">
+								<img src="[field:picname/]" alt="[field:fulltitle/]" height="250" style="height:250px"/>
+								<div class="project-hover">
+									<a class="link-icon" href="[field:arcurl /]"></a>
+									<a class="search-icon prettyPhoto" href="[field:picname/]"></a>
+								</div>
+							</div>
+							<div class="project-meta">
+								<h4>[field:title/]</h4>
+								<span class="project-category">[field:pubdate function=MyDate('Y-m-d',@me)'/]</span>
+								<div class="project-like" data-post="3820">
+									<i class=" icons icon-heart-7"></i>
+									<span class="like-count">[field:click/]</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                     {/dede:list}
+					
+				
+				</div>
+			</div>
+		</div>
+		<div class="align-center load-more">
+        <div class="dede_pages">
+			<ul class="pagelist">
+				{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+			</ul>
+		
+		</div>
+		</div>
+		</section>
+	</div>
+	<!-- /Container -->
+	</section>
+	<!-- /Main Content -->
+</div>
+	<!-- /Marine Conten Inner -->
+{dede:include filename="footer.htm"/}
+</div>
+<!-- /Marine Content Wrapper -->
+<!-- JavaScript -->
+<script type='text/javascript' src='/genban/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery-ui.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.mousewheel.min.js'></script>
+<script type='text/javascript' src='/genban/js/SmoothScroll.min.js'></script>
+<script type='text/javascript' src='/genban/js/prettyphoto/js/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='/genban/js/modernizr.js'></script>
+<script type='text/javascript' src='/genban/js/wow.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.sharre.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.knob.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.mixitup.min.js'></script>
+<script type='text/javascript' src='/genban/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='/genban/js/jquery.masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='/genban/js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='/genban/js/perfect-scrollbar-0.4.10.with-mousewheel.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.nouislider.min.js'></script>
+<script type='text/javascript' src='/genban/js/jquery.validity.min.js'></script>
+<script type='text/javascript' src='/genban/js/tweetie.min.js'></script>
+<script type='text/javascript' src='/genban/js/script.js'></script>
+<script type='text/javascript' src='/genban/js/rs-plugin/js/jquery.themepunch.enablelog.js'></script>
+<script type='text/javascript' src='/genban/js/rs-plugin/js/jquery.themepunch.revolution.js'></script>
+<script type='text/javascript' src='/genban/js/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+<script type='text/javascript' src='/genban/js/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.tp-banner').show().revolution(
+	{
+		dottedOverlay:"none",
+		delay:16000,
+		startwidth:1170,
+		startheight:700,
+		hideThumbs:200,
+		thumbWidth:100,
+		thumbHeight:50,
+		thumbAmount:5,
+		navigationType:"bullet",
+		navigationArrows:"solo",
+		navigationStyle:"preview2",
+		touchenabled:"on",
+		onHoverStop:"on",
+		swipe_velocity: 0.7,
+		swipe_min_touches: 1,
+		swipe_max_touches: 1,
+		drag_block_vertical: false,
+		parallax:"mouse",
+		parallaxBgFreeze:"on",
+		parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+		keyboardNavigation:"off",
+		navigationHAlign:"center",
+		navigationVAlign:"bottom",
+		navigationHOffset:0,
+		navigationVOffset:20,
+		soloArrowLeftHalign:"left",
+		soloArrowLeftValign:"center",
+		soloArrowLeftHOffset:20,
+		soloArrowLeftVOffset:0,
+		soloArrowRightHalign:"right",
+		soloArrowRightValign:"center",
+		soloArrowRightHOffset:20,
+		soloArrowRightVOffset:0,
+		shadow:0,
+		fullWidth:"on",
+		fullScreen:"off",
+		spinner:"spinner4",
+		stopLoop:"off",
+		stopAfterLoops:-1,
+		stopAtSlide:-1,
+		shuffle:"off",
+		autoHeight:"off",						
+		forceFullWidth:"off",						
+		hideThumbsOnMobile:"off",
+		hideNavDelayOnMobile:1500,						
+		hideBulletsOnMobile:"off",
+		hideArrowsOnMobile:"off",
+		hideThumbsUnderResolution:0,
+		hideSliderAtLimit:0,
+		hideCaptionAtLimit:0,
+		hideAllCaptionAtLilmit:0,
+		startWithSlide:0,
+		videoJsPath:"/genban/rs-plugin/videojs/",
+		fullScreenOffsetContainer: ""	
+	});
+});	//ready
+</script>
+</body>
+</html>
